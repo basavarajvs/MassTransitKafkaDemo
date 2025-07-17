@@ -57,6 +57,11 @@ Once inside the container, create the topic:
 kafka-topics --create --topic my-topic --bootstrap-server localhost:9092 --partitions 1 --replication-factor 1
 ```
 
+Or simplfy use
+```bash
+docker exec -it <CONTAINER_ID>  kafka-topics --create --topic my-topic --bootstrap-server 127.0.0.1:9092 --partitions 3 --replication-factor 1
+```
+
 You can verify the topic was created:
 ```bash
 kafka-topics --list --bootstrap-server localhost:9092
